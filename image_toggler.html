@@ -26,6 +26,7 @@
         .img{
             height:100px;
             width:150px;
+            cursor: pointer;
         }
     </style>
     <title>Image Toggler</title>
@@ -38,19 +39,19 @@
     </div>
     <div>
         <div class="container">
-            <img src="./img/bulbul.avif" class="img mt-5 rounded"onclick="bulbul()"/>
-            <img src="./img/kingfisher.avif" class="img mt-5 rounded"/>
-            <img src="./img/oiseau.avif" class="img mt-5 rounded"/>
-            <img src="./img/peacock.avif" class="img mt-5 rounded"/>
-            <img src="./img/pigeon.avif" class="img mt-5 rounded"/>
+            <img src="./img/bulbul.avif" class="img mt-5 rounded" onclick="birds('bulbul')"/>
+            <img src="./img/kingfisher.avif" class="img mt-5 rounded" onclick="birds('kingfisher')"/>
+            <img src="./img/oiseau.avif" class="img mt-5 rounded" onclick="birds('oiseau')"/>
+            <img src="./img/peacock.avif" class="img mt-5 rounded" onclick="birds('peacock')"/>
+            <img src="./img/pigeon.avif" class="img mt-5 rounded" onclick="birds('pigeon')"/>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"> 
+    </script>
     <script>
-        bulbul(){
-         const main_image=document.getElementById(display);
-         
+       function birds(bird){
+         document.getElementById('display').src=`./img/${bird}.avif`;
         }
     </script>
 </body>
